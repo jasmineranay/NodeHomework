@@ -6,7 +6,6 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = [
     {
-
         type: 'input',
         name: 'title',
         message: 'What is the title of your project?',
@@ -31,7 +30,7 @@ const questions = [
     },
 ]
 
-async function createReadme(answers) {
+function createReadme(answers) {
  fs.writeFileSync('./READ.md', `
  # ${answers.title}
  ## Description
