@@ -14,20 +14,20 @@ const questions = [
     {
 
         type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
+        name: 'description',
+        message: 'What is your project all about?',
     },
     {
 
         type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
+        name: 'installation',
+        message: 'How do you install your project?',
     },
     {
 
         type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
+        name: 'deployedLink',
+        message: 'What is the link to your deployed project?',
     },
 ]
 
