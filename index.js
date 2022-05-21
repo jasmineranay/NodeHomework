@@ -121,14 +121,14 @@ function createReadme(data) {
     - Github Link: https://github.com/${data.github} 
     - Email: ${data.email}
     ## License
-    - Copyright 2022 Brian Alegre
+    - Copyright 2022 Jasmine Tsao
     - Licensed under the: ${licensetext} 
     `
         );
     };
     
     // CLI Prompts
-    inquirer.prompt(questions).then((data) => {
+    inq.prompt(questions).then((data) => {
         createReadme(data);
         const filename = `${data.project.toLowerCase().split(' ').join('')}.json`;
     
