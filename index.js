@@ -121,7 +121,7 @@ function createReadme(data) {
     - Github Link: https://github.com/${data.github} 
     - Email: ${data.email}
     ## License
-    - Copyright 2022 Brian Alegre
+    - Copyright 2022 Jasmine Tsao
     - Licensed under the: ${licensetext} 
     `
         );
