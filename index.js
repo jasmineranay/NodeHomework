@@ -6,6 +6,7 @@ const { windowCount } = require ('rxjs');
 // const { create } = require('domain');
 // TODO: Create an array of questions for user input
 const questions = [
+    //add questions to ask user
     {
         type: 'input',
         name: 'title',
@@ -28,7 +29,6 @@ const questions = [
 		type: 'input',
 		message: 'What is your application used for?',
 		name: 'usage',
-		// default: 'Gaining EXP with Node',
 	},
     {
 		type: 'checkbox',
@@ -40,7 +40,6 @@ const questions = [
 		type: 'input',
 		message: 'What are the guidelines to contributing?',
 		name: 'contribute',
-		// default: 'You can NOT',
 	},
     {
 
@@ -62,6 +61,7 @@ const questions = [
     },
 ]
 
+//creates a license for user
 function createReadme(data) {
     var license = '';
     var licensetext = '';
