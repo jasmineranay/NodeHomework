@@ -28,6 +28,18 @@ const questions = [
         name: 'deployedLink',
         message: 'What is the link to your deployed project?',
     },
+    {
+
+        type: 'input',
+        name: 'githubusername',
+        message: 'What is your GitHub username?',
+    },
+    {
+
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
 ]
 
 function createReadme(answers) {
@@ -39,6 +51,11 @@ function createReadme(answers) {
  ${answers.installation}
  ## Deployed Link
  [deployed link]($answers{answers.deployedLink})
+ ${answers.githubusername}
+ ## GitHub Username
+ ${answers.githubusername}
+ ## Email
+ [deployed link]($answers{answers.email})
  `)
 }
 
