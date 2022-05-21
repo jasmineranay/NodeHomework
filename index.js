@@ -2,7 +2,7 @@
 const inq = require('inquirer');
 const chalk = require('chalk');
 const fs = require('fs');
-const { windowCount } = require ('rx.js');
+const { windowCount } = require ('rxjs');
 // const { create } = require('domain');
 // TODO: Create an array of questions for user input
 const questions = [
@@ -66,26 +66,25 @@ function createReadme(data) {
     var license = '';
     var licensetext = '';
     switch (data.license[0]) {
-        switch (data.license[0]) {
             case 'BSD':
                 license =
                     '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
-                licenseTXT = `[BSD License](https://opensource.org/licenses/BSD-3-Clause)`;
+                licensetext = `[BSD License](https://opensource.org/licenses/BSD-3-Clause)`;
                 break;
             case 'MIT':
                 license =
                     '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-                licenseTXT = `[MIT License](https://opensource.org/licenses/MIT)`;
+                licensetext = `[MIT License](https://opensource.org/licenses/MIT)`;
                 break;
             case 'GPL':
                 license =
                     '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
-                licenseTXT = `[GPL License](https://www.gnu.org/licenses/gpl-3.0)`;
+                licensetext = `[GPL License](https://www.gnu.org/licenses/gpl-3.0)`;
     
                 break;
             default:
                 license = 'No License Chosen';
-                licenseTXT = ``;
+                licensetext = ``;
     
                 break;
         }
@@ -123,7 +122,7 @@ function createReadme(data) {
     - Email: ${data.email}
     ## License
     - Copyright 2022 Brian Alegre
-    - Licensed under the: ${licenseTXT} 
+    - Licensed under the: ${licensetext} 
     `
         );
     };
