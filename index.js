@@ -1,6 +1,5 @@
 // TODO: Include packages needed for this application
 const inq = require('inquirer');
-const chalk = require('chalk');
 const fs = require('fs');
 const { windowCount } = require ('rxjs');
 // const { create } = require('domain');
@@ -91,7 +90,7 @@ function createReadme(data) {
         fs.writeFileSync(
             './readme.md',
             `# ${data.project}
-    ${license}
+            ${license}
     ## Table of Contents
     - [Description](#description)
     - [Application Preview](#application-preview)
@@ -131,8 +130,7 @@ function createReadme(data) {
     inq.prompt(questions).then((data) => {
         createReadme(data);
         const filename = `${data.project.toLowerCase().split(' ').join('')}.json`;
-    
         fs.writeFileSync(filename, JSON.stringify(data, null, '\t'), (err) =>
-            err ? console.log(err) : console.log('Success!')
+        err ? console.log(err) : console.log('Success!')
         );
     });
